@@ -1,13 +1,91 @@
-body {
+*{
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
+body {
+background: rgb(233, 230, 230);
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }
+.App{
+
+}
+header{
+  background: rgb(255,215,0);
+  padding: 1rem;
+  display: flex;
+  justify-content: end;
+}
+.search:focus{
+outline: 0;
+}
+.search{
+  border-radius: 50px;
+  background: rgb(250, 228, 104);
+  padding: 0.4rem 0.5rem;
+}
+ 
+.movie{
+width: 200px;
+background: rgb(255, 254, 254);
+margin: 0.5rem;
+position: relative;
+
+}
+.movie img{
+  max-width: 100%;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.movie-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 75%;
+  margin: auto;
+  background: #FFF;
+}
+.movie-info{
+  display: flex;
+  justify-content:space-between;
+  margin: 0.5rem;
+}
+.movie-info h3{
+  margin: 0;
+}
+.movie-overview{
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  position: absolute;
+  top: 15%;
+  left: 0;
+  background: rgb(255,215,0);
+  transform: translateY(85%);
+  transition:transform 0.3s ease-in-out;
+  max-height: 100%;
+  height: 85%;
+  width: 100%;
+  overflow: hidden;
+  padding: 0 1rem ;
+}
+.movie-overview {
+  visibility: hidden;
+  
+
+}
+.movie:hover .movie-overview{
+  transform: translateY(0%);
+  visibility: visible;
+
+}
+.orange{
+  color: orange;
+ }
+.green{
+  color: green;
+ }
+.red{
+  color: red;
+ }
